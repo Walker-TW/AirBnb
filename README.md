@@ -35,3 +35,7 @@ I would like to approve/reject each application to rent
 As a User
 So that I can ensure my property is rented out
 I would like for it to remain available until it has been confimred
+
+``````
+
+Created migrations folder with instructions for setting up tables
