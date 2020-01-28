@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'capybara', group: :test
 gem 'json'
 gem 'pg'
-gem 'rspec'
 gem 'rspec', group: :test
 gem 'rubocop', '0.71.0'
 gem 'selenium-webdriver'
