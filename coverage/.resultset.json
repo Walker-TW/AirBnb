@@ -29,8 +29,32 @@
         0,
         null,
         null
+      ],
+      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/unit/user_spec.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/bengittins/Projects/Makers/week_6/AirBnb/lib/users.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1580204472
+    "timestamp": 1580208115
   }
 }

@@ -1,3 +1,4 @@
+require_relative './setup_test_database'
 #add simple cov setup to rspec setup file=>>
 require 'simplecov'
 require 'simplecov-console'
@@ -14,6 +15,9 @@ require './app'
 Capybara.app = MakersBnB
 
 RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
   # Use color not only in STDOUT but also in pagers and files
   config.tty = true
   # Use the specified formatter
