@@ -1,4 +1,13 @@
-#this is where the controller goes 
+require 'sinatra/base'
+# require './lib/bookmarks'
 
+class MakersBnB < Sinatra::Base
 
-# run! if app_file == $0
+  enable :sessions
+
+  get '/' do 
+    "Helo World"
+  end
+
+  run! if app_file == $0
+end
