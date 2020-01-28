@@ -2,7 +2,6 @@
 
 source 'https://rubygems.org'
 
-gem 'capybara'
 gem 'capybara', group: :test
 gem 'json'
 gem 'pg'
