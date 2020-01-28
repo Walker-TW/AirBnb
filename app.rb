@@ -38,6 +38,7 @@ class MakersBnB < Sinatra::Base
 
   post '/signingup' do
     erb :congrats
+    
     redirect to '/congrats'
   end
 
