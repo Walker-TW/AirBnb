@@ -22,4 +22,14 @@ class Space
     end
   end
 
+  def self.create(space_name:, city:, description:, ppn:)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+    result = connection.exec("INSERT INTO spaces (space_name, city, description, ppn) VALUES ('#{space_name}', #{city}, #{description}, #{ppn}")
+    Space.new(space_name: result[0]['space_name'], city: result[0]['city'], description: result[0]['description'], ppn: result[0]['ppn'])
+  end
+
 end
