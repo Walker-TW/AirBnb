@@ -1,4 +1,17 @@
 I got the list in the erbbbbb
+<br>
+
+<% @space.each do |space|%>
+  Name: <%= space.space_name%>
+  <br>
+  City: <%= space.city%>
+  <br>
+  Description: <%= space.description%>
+  <br>
+  Price per night: <%= space.ppn%>
+  <br>
+  <br>
+<%end%>
 
 <form action='/portal'>
 <input type='submit' value='Take Me Home Country Road'>

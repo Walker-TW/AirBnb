@@ -1,5 +1,5 @@
 require 'sinatra/base'
-# require './lib/bookmarks'
+require './lib/space'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -13,13 +13,13 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/login' do
-    session[:username] = params[:username]
-    session[:password]= params[:password]
+    session[:user_name] = params[:user_name]
+    session[:password] = params[:password]
     redirect to '/portal'
   end
 
   post '/portal' do
-    @username = session[:username]
+    @user_name = session[:user_name]
     @password = session[:password]
     erb :portal
   end
@@ -29,6 +29,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/list' do
+    @space = Space.all
     erb :list
   end
 
@@ -38,12 +39,11 @@ class MakersBnB < Sinatra::Base
 
   post '/signingup' do
     erb :congrats
-    
     redirect to '/congrats'
   end
 
   get '/congrats' do
-    @username = session[:user_name]
+    @user_name = session[:user_name]
     erb :congrats
   end
 

@@ -1,8 +1,13 @@
 feature 'list space' do
+  scenario 'there is a list of spaces' do
+    visit '/list'
+    expect(page).to have_content('house')
+  end
+
   scenario 'user can list space' do
     visit '/' 
     click_on 'login'
-    fill_in 'username', with: 'toadymctoadface'
+    fill_in 'user_name', with: 'toadymctoadface'
     fill_in 'password', with: 'ribbit'
     click_on 'enter'
     click_on 'create a new listing'
