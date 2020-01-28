@@ -34,13 +34,20 @@ class MakersBnB < Sinatra::Base
     # @username = session[:username]
     # @password = session[:password]
     erb :congrats
-    # redirect to '/congrats'
+    redirect to '/congrats'
+  end
+
+  get '/congrats' do
+    @username = session[:user_name]
+
+    erb :congrats
   end
 
   post '/congrats' do
-    @username = params[:username]
-    @password = params[:password]
+    session[:user_name] = params[:user_name]
+    session[:password] = params[:password]
     erb :congrats
+    redirect '/congrats'
   end
 
   run! if app_file == $0
