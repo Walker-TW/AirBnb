@@ -96,6 +96,7 @@ DEPENDENCIES
   capybara
   json
   pg
+  rack
   rspec
   rubocop (= 0.71.0)
   selenium-webdriver

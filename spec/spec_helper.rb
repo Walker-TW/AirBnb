@@ -6,7 +6,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Forma
 SimpleCov.start
 #set up environment
 ENV['RACK_ENV'] = 'test'
-ENV['ENVIRONMENT'] = 'test'
+# ENV['ENVIRONMENT'] = 'test'
 #add capybara setup
 require 'capybara'
 require 'capybara/dsl'
