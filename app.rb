@@ -53,5 +53,9 @@ class MakersBnB < Sinatra::Base
     redirect '/congrats'
   end
 
+  get '/new' do
+    erb :new
+  end
+
   run! if app_file == $0
 end
