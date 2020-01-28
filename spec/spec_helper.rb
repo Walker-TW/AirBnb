@@ -22,7 +22,3 @@ RSpec.configure do |config|
     puts
   end
 end
-
-
-
-
