@@ -1,3 +1,41 @@
+# Makers BnB - Team Toad #
+
+*In progress* 
+
+A clone of a popular and unnamed space sharing app. 
+
+js-standard-style
+
+## Tech Used ##
+
+*built with:*
+
+Ruby backend (tested with rspec, capybara)
+Sinatra 
+Javascript
+HTML & CSS
+
+## Features ##
+
+User sign up with password encryption 
+
+
+## Installation ##
+
+Clone repo git@github.com:Walker-TW/AirBnb.git
+Run bundle 
+Create Databases (see db/migrations for SQL instructions)
+
+## Credits ##
+
+*BROUGHT TO YOU BY THE TEAM AT Toad:*
+
+Ben Gittins AKA squareben1
+Ria Patel AKA notriapatel
+Tom Walker AKA Walker-TW
+Katie Rodgers AKA junolouise
+
+
 ## User Stories ##
 
 As a User

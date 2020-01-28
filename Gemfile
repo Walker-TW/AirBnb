@@ -14,3 +14,4 @@ gem 'simplecov', require: false
 gem 'simplecov-console', require: false
 gem 'sinatra'
 gem 'webdrivers', '~> 4.0'
+gem 'bcrypt'
