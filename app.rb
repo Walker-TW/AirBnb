@@ -28,15 +28,18 @@ class MakersBnB < Sinatra::Base
     erb :signup
   end
 
-  post '/signup' do
-    session[:username] = params[:username]
-    session[:password]= params[:password]
-    redirect to '/congrats'
+  post '/signingup' do
+    # session[:username] = params[:username]
+    # session[:password] = params[:password]
+    # @username = session[:username]
+    # @password = session[:password]
+    erb :congrats
+    # redirect to '/congrats'
   end
 
   post '/congrats' do
-    @username = session[:username]
-    @password = session[:password]
+    @username = params[:username]
+    @password = params[:password]
     erb :congrats
   end
 
