@@ -15,3 +15,4 @@ gem 'simplecov-console', require: false
 gem 'sinatra'
 gem 'webdrivers', '~> 4.0'
 gem 'bcrypt'
+gem 'rack'
