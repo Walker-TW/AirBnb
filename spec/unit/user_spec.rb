@@ -17,4 +17,13 @@ describe User do
       expect(user.password).not_to eq 'password123'
     end
   end
+
+  describe '#find' do
+    it 'retrieves user from db' do
+      user = User.create(user_name: "Testy McTesterson", password: "password123")
+      result = User.find(id: user.id)
+      expect(result.id).to eq user.id
+      expect(result.user_name).to eq user.user_name
+    end
+  end
 end
