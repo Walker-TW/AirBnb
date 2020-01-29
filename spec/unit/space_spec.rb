@@ -17,7 +17,7 @@ describe Space do
     it 'returns all spaces in DB' do 
       space = Space.create(space_name: "Spacey MsSpacerson", city: "London", description: "119 Commerical Street BR1 9ER", ppn:"£125")
       space2 = Space.create(space_name: "Spacey McSpaceface", city: "Bristol", description:"120 Fake Street BR2 911", ppn:"£130")
-      space3 = Space.create(space_name: "SPACE", city: "Edunburgh", description:"125 NotThere Street BR2 9ER", ppn:"£150")
+      space3 = Space.create(space_name: "SPACE", city: "Edinburgh", description:"125 NotThere Street BR2 9ER", ppn:"£150")
       spaces = Space.all
       expect(spaces.length).to eq 4 #inc test addition
       expect(spaces[2].city).to eq "Bristol"

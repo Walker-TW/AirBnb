@@ -41,6 +41,8 @@ class MakersBnB < Sinatra::Base
 
   post '/signup' do
     User.create(user_name: params[:user_name], password: params[:password])
+    session[:user_name] = params[:user_name]
+    session[:password]= params[:password]
     redirect to '/congrats'
   end
 
