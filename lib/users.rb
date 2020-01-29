@@ -31,4 +31,14 @@ class User
     result = connection.exec("SELECT * FROM users WHERE id = #{id}")
     User.new(id: result[0]['id'], user_name: result[0]['user_name'], password: result[0]['password'])
   end
+
+  def self.authenticate(user_name:, password:)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else 
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+    result = connection.exec("SELECT * FROM users WHERE user_name = '#{user_name}'")
+    User.new(id: result[0]['id'], user_name: result[0]['user_name'], password: result[0]['password'])
+  end
 end

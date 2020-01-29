@@ -26,4 +26,12 @@ describe User do
       expect(result.user_name).to eq user.user_name
     end
   end
+
+  describe '.authenticate' do
+    it 'returns the user if the info is right and if it exists' do
+      user = User.create(user_name: "Testy McTesterson", password: "password123")
+      auth_user = User.authenticate(user_name: "Testy McTesterson", password: "password123")
+      expect(auth_user.id).to eq user.id
+    end
+  end
 end
