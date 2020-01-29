@@ -1,5 +1,4 @@
 require 'space'
-require 'database_helpers'
 
 describe Space do 
   describe '#create' do 
