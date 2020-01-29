@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require './lib/users'
 
-
 class MakersBnB < Sinatra::Base
   enable :sessions
 
@@ -23,6 +22,8 @@ class MakersBnB < Sinatra::Base
     @user_name = session[:user_name]
     @password = session[:password]
     erb :portal
+    Space.create(space_name: params[:space_name], city: params[:city], description: params[:description], ppn: params[:ppn])
+    redirect '/portal'
   end
 
   get '/portal' do
@@ -30,6 +31,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/list' do
+    @space = Space.all
     erb :list
   end
 
