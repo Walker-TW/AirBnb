@@ -22,10 +22,8 @@ class MakersBnB < Sinatra::Base
     @user_name = session[:user_name]
     @password = session[:password]
     erb :portal
-    p 'params'
-    p params
     Space.create(space_name: params[:space_name], city: params[:city], description: params[:description], ppn: params[:ppn])
-    redirect '/new'
+    redirect '/portal'
   end
 
   get '/portal' do

@@ -28,9 +28,7 @@ class Space
     else
       connection = PG.connect(dbname: 'makersbnb')
     end
-    result = connection.exec("INSERT INTO spaces (space_name, city, description, ppn) VALUES ('#{space_name}', '#{city}', '#{description}', '#{ppn}')")
-    p 'result'
-    p result
+    result = connection.exec("INSERT INTO spaces (space_name, city, description, ppn) VALUES ('#{space_name}', '#{city}', '#{description}', '#{ppn}') RETURNING space_name, city, description, ppn")
     Space.new(space_name: result[0]['space_name'], city: result[0]['city'], description: result[0]['description'], ppn: result[0]['ppn'])
   end
 
