@@ -11,7 +11,7 @@ feature 'list space' do
     fill_in 'description', with: 'description'
     fill_in 'ppn', with: 100
     click_on 'Post'
-    click_on 'List Properties'
+    click_on 'List of Properties'
     expect(page).to have_content('space_name')
   end
 end

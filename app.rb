@@ -16,16 +16,11 @@ class MakersBnB < Sinatra::Base
 
   post '/login' do
     user = User.authenticate(user_name: params[:user_name], password: params[:password])
-    # if user
-      session[:user_id] = user.id
-      session[:user_name] = params[:user_name]
-      session[:password] = params[:password]
-      @user_name = session[:user_name]
-      redirect to '/portal'
-    # else
-    #   flash[:notice] = 'Wrong username or password, please try again'
-    #   redirect '/login/new'
-    # end
+    session[:user_id] = user.id
+    session[:user_name] = params[:user_name]
+    session[:password] = params[:password]
+    @user_name = session[:user_name]
+    redirect to '/portal'
   end
 
   post '/portal' do
@@ -70,6 +65,11 @@ class MakersBnB < Sinatra::Base
 
   get '/new' do
     erb :new
+  end
+
+  post '/logout' do
+    session.clear
+    redirect '/'
   end
 
   run! if app_file == $0
