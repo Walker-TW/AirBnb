@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/users'
 require './lib/space'
+require './database_connection_setup'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -15,10 +16,16 @@ class MakersBnB < Sinatra::Base
 
   post '/login' do
     user = User.authenticate(user_name: params[:user_name], password: params[:password])
-    session[:user_id] = user.id
-    session[:user_name] = params[:user_name]
-    @user_name = session[:user_name]
-    redirect to '/portal'
+    # if user
+      session[:user_id] = user.id
+      session[:user_name] = params[:user_name]
+      session[:password] = params[:password]
+      @user_name = session[:user_name]
+      redirect to '/portal'
+    # else
+    #   flash[:notice] = 'Wrong username or password, please try again'
+    #   redirect '/login/new'
+    # end
   end
 
   post '/portal' do
