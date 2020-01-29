@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/space'
+require './lib/users'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -14,7 +14,7 @@ class MakersBnB < Sinatra::Base
 
   post '/login' do
     session[:user_name] = params[:user_name]
-    session[:password] = params[:password]
+    session[:password]= params[:password]
     redirect to '/portal'
   end
 
@@ -39,8 +39,8 @@ class MakersBnB < Sinatra::Base
     erb :signup
   end
 
-  post '/signingup' do
-    erb :congrats
+  post '/signup' do
+    User.create(user_name: params[:user_name], password: params[:password])
     redirect to '/congrats'
   end
 
