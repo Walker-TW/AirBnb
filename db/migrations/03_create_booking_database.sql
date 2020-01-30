@@ -1,0 +1,1 @@
+CREATE TABLE bookings(bookings_id SERIAL PRIMARY KEY, space_id INT REFERENCES spaces(space_id), user_id INT REFERENCES users(user_id));
