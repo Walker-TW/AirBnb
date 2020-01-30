@@ -4,10 +4,10 @@ require './lib/database_connection'
 
 class User
 
-  attr_reader :id, :user_name, :password
+  attr_reader :user_id, :user_name, :password
 
-  def initialize(id:, user_name:, password:)
-    @id = id
+  def initialize(user_id:, user_name:, password:)
+    @user_id = user_id
     @user_name = user_name
     @password = password
   end
