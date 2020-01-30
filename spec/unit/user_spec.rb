@@ -18,8 +18,8 @@ describe User do
   describe '#find' do
     it 'retrieves user from db' do
       user = User.create(user_name: "Testy McTesterson", password: "password123")
-      result = User.find(id: user.id)
-      expect(result.id).to eq user.id
+      result = User.find(user_id: user.user_id)
+      expect(result.user_id).to eq user.user_id
       expect(result.user_name).to eq user.user_name
     end
   end
