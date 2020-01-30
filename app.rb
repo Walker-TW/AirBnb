@@ -79,7 +79,11 @@ class MakersBnB < Sinatra::Base
   post '/book' do
     session[:date] = params[:date]
     session[:booking_space] = params[:booking_space]
-    redirect '/portal'
+    redirect '/booked'
+  end
+
+  get '/booked' do
+    erb :booked
   end
 
   get '/bookings' do
