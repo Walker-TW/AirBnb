@@ -37,5 +37,12 @@ describe User do
 
       expect(User.authenticate(user_name: "Not Right", password: "password456")).to be_nil
     end 
+
+      it 'returns nil given an incorrect password' do
+        user = User.create(user_name: "Ben G", password: "password456")
+    
+        expect(User.authenticate(user_name: "Ben G", password: "not right")).to be_nil
+      end
+    
   end
 end

@@ -78,7 +78,11 @@ class MakersBnB < Sinatra::Base
 
   post '/logout' do
     session.clear
-    redirect '/'
+    redirect '/loggedout'
+  end
+
+  get '/loggedout' do
+    erb :'login/loggedout'
   end
 
   run! if app_file == $0
