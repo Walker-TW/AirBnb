@@ -10,6 +10,11 @@ class Space
     @ppn = ppn
   end
 
+  def self.find(space_name:)
+    result = DatabaseConnection.query("SELECT * FROM spaces WHERE space_name = '#{space_name}'")
+    Space.new(space_name: result[0]['space_name'], city: result[0]['city'], description: result[0]['description'], ppn: result[0]['ppn'])
+  end
+
   def self.all
     result = DatabaseConnection.query("SELECT * FROM spaces")
     result.map do |space|

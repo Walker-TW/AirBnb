@@ -139,7 +139,7 @@
         null,
         null,
         1,
-        35,
+        37,
         null,
         null
       ],
@@ -150,10 +150,15 @@
         1,
         null,
         1,
-        18,
-        18,
-        18,
-        18,
+        20,
+        20,
+        20,
+        20,
+        null,
+        null,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -164,8 +169,8 @@
         null,
         null,
         1,
-        7,
-        7,
+        8,
+        8,
         null,
         null,
         null
@@ -324,6 +329,38 @@
         null,
         null
       ],
+      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/unit/booking_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/bengittins/Projects/Makers/week_6/AirBnb/lib/booking.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/unit/space_spec.rb": [
         1,
         null,
@@ -348,6 +385,15 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -403,6 +449,6 @@
         null
       ]
     },
-    "timestamp": 1580396106
+    "timestamp": 1580402929
   }
 }

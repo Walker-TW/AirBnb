@@ -23,4 +23,13 @@ describe Space do
       expect(spaces[1].space_name).to eq "Spacey MsSpacerson"
     end
   end 
+
+  describe '#find' do
+    it 'retrieves space from db' do
+      space = Space.create(space_name: "Spacey MsSpacerson", city: "London", description: "119 Commerical Street BR1 9ER", ppn:"£125")
+      result = Space.find(space_name: space.space_name)
+      expect(result.space_name).to eq space.space_name
+      # expect(result.city).to eq user.user_name
+    end
+  end
 end 
