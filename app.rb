@@ -72,5 +72,19 @@ class MakersBnB < Sinatra::Base
     redirect '/'
   end
 
+  get '/book' do
+    erb :book
+  end
+
+  post '/book' do
+    session[:date] = params[:date]
+    session[:booking_space] = params[:booking_space]
+    redirect '/portal'
+  end
+
+  get '/bookings' do
+    erb :bookings
+  end
+
   run! if app_file == $0
 end
