@@ -16,7 +16,7 @@ class MakersBnB < Sinatra::Base
 
   post '/login' do
     user = User.authenticate(user_name: params[:user_name], password: params[:password])
-    session[:user_id] = user.id
+    session[:user_id] = user.user_id
     session[:user_name] = params[:user_name]
     session[:password] = params[:password]
     @user_name = session[:user_name]
@@ -45,14 +45,14 @@ class MakersBnB < Sinatra::Base
 
   post '/signup' do
     user = User.create(user_name: params[:user_name], password: params[:password])
-    session[:user_id] = user.id
+    session[:user_id] = user.user_id
     session[:user_name] = user.user_name
     redirect to '/congrats'
   end
 
   get '/congrats' do
     @user_name = session[:user_name]
-    @user = User.find(id: session[:user_id])
+    @user = User.find(user_id: session[:user_id])
     erb :congrats
   end
 
