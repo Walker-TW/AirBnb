@@ -9,7 +9,8 @@ feature 'list space' do
     fill_in 'name', with: 'name'
     fill_in 'description', with: 'description'
     fill_in 'ppn', with: 100
-    click_on 'enter'
-    expect(page).to have_content('your listing has been added')
+    click_on 'Post'
+    click_on 'List of Properties'
+    expect(page).to have_content('space_name')
   end
 end

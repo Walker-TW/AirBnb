@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/users'
 require './lib/space'
+require './database_connection_setup'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -9,25 +10,27 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
-  get '/login' do
-    erb :login
+  get '/login/new' do
+    erb :'login/new'
   end
 
   post '/login' do
+    user = User.authenticate(user_name: params[:user_name], password: params[:password])
+    session[:user_id] = user.id
     session[:user_name] = params[:user_name]
-    session[:password]= params[:password]
+    session[:password] = params[:password]
+    @user_name = session[:user_name]
     redirect to '/portal'
   end
 
   post '/portal' do
-    @user_name = session[:user_name]
-    @password = session[:password]
-    erb :portal
     Space.create(space_name: params[:space_name], city: params[:city], description: params[:description], ppn: params[:ppn])
     redirect '/portal'
   end
 
   get '/portal' do
+    @user_name = session[:user_name]
+    @password = session[:password]
     erb :portal
   end
 
@@ -41,14 +44,15 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/signup' do
-    User.create(user_name: params[:user_name], password: params[:password])
-    session[:user_name] = params[:user_name]
-    session[:password]= params[:password]
+    user = User.create(user_name: params[:user_name], password: params[:password])
+    session[:user_id] = user.id
+    session[:user_name] = user.user_name
     redirect to '/congrats'
   end
 
   get '/congrats' do
     @user_name = session[:user_name]
+    @user = User.find(id: session[:user_id])
     erb :congrats
   end
 
@@ -61,6 +65,11 @@ class MakersBnB < Sinatra::Base
 
   get '/new' do
     erb :new
+  end
+
+  post '/logout' do
+    session.clear
+    redirect '/'
   end
 
   run! if app_file == $0
