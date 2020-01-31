@@ -1,5 +1,5 @@
 feature 'user can book a space' do
-  scenario 'user logs in and books an available' do 
+  scenario 'user logs in and books an available' do
     user = User.create(user_name: "Ben G", password: "password456")
     space = Space.create(space_name: "Spacey MsSpacerson", city: "London", description:"119 Commerical Street, BR1 9ER", ppn:("£125"))
     visit '/login/new'

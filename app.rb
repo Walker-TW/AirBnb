@@ -34,6 +34,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/portal' do
+    #ADD USER 
     Space.create(space_name: params[:space_name], city: params[:city], description: params[:description], ppn: params[:ppn])
     redirect '/portal'
   end
@@ -109,6 +110,10 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/bookings' do
+    user = User.find(user_id: session[:user_id])
+    @bookings = Booking.all(user_id: user.user_id)
+    p "bookings in bookings"
+    p @bookings
     erb :bookings
   end
 
