@@ -104,5 +104,23 @@ class MakersBnB < Sinatra::Base
     erb :'login/loggedout'
   end
 
+  get '/book' do
+    erb :book
+  end
+
+  post '/book' do
+    session[:date] = params[:date]
+    session[:booking_space] = params[:booking_space]
+    redirect '/booked'
+  end
+
+  get '/booked' do
+    erb :booked
+  end
+
+  get '/bookings' do
+    erb :bookings
+  end
+
   run! if app_file == $0
 end

@@ -1,4 +1,11 @@
-Its A Portal
+<!DOCTYPE html>
+  <head>
+    <title>Portal </title>
+    <link type='text/css' rel='stylesheet' href='/css/style.css'>
+    <base href="/list">
+  </head>
+<body id='portal'>
+<h1>Its A Portal</h1>
 <br>
 <br>
 <br>
@@ -7,8 +14,13 @@ Sup toad <%= @user_name %>
 <input type='submit' value='List of Properties'>
 </form>
 <form action='/new'>
-<input type='submit' value='List a New Property'>
+  <input type='submit' value='List a New Property'>
+</form>
+<form action='/bookings'>
+  <input type='submit' value='Go to bookings'>
 </form>
 <form action='/logout' method='post'>
-<input type='submit' value='Log out'>
+  <input type='submit' value='Log out'>
 </form>
+</body>
+</html>
