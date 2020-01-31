@@ -1,12 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title> Sign up </title>
+    <link type='text/css' rel='stylesheet' href='/css/style.css'>
+    <base href="/signup">
+  </head>
 <h1> Sign up </h1>
+<body id='sign'>
 <form action='/signup' method='post'>
   <label for='user_name'>
-    user_name
+    <div id='user_name'>Username</div>
     <input type='text' name='user_name'>
   </label>
   <label for='password'>
-    Password
+    <div id='password'>Password</div>
     <input type='password' name='password'>
   </label>
+  <div id='join'>
   <input type='submit' name='Join!'>
+  </div>
 </form>
+</body>
+</html>
