@@ -79,20 +79,12 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/book' do
-    # p "space name in book:"
-    # p space.space_name
     session[:space_name] = params[:space_name]
     @space_name = session[:space_name]
-    # session[:date] = params[:date]
-    # p "date in book"
-    # p session[:date] 
-    # p "params"
-    # p params[:date]
     erb :book
   end
 
   post '/book' do
-    # user find
     session[:date] = params[:date]
     @date = session[:date]
     @space_name = session[:space_name]
