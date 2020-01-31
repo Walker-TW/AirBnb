@@ -10,8 +10,9 @@
 <br>
 <form action='/book' method='post'>
   <label for='booking_space'>
-    Name of space<br>
-    <input type='text' name='booking_space'>
+
+    You are booking <%= @space_name %>
+
   </label>
   <br>
   <br>
@@ -19,7 +20,7 @@
     Date please<br>
     <input type='date' name='date'>
   </label><br><br>
-  <button class ='submit' type='submit'>Book</button>
+  <button class ='submit' type='submit'>Finalise Booking</button>
 </form>
 </body>
 </html>
