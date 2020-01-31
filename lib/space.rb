@@ -17,6 +17,11 @@ class Space
     Space.new(space_id: result[0]['space_id'], space_name: result[0]['space_name'], city: result[0]['city'], description: result[0]['description'], ppn: result[0]['ppn'], image: result[0]['image'])
   end
 
+  def self.find_by_id(space_id:)
+    result = DatabaseConnection.query("SELECT * FROM spaces WHERE space_id = '#{space_id}'")
+    Space.new(space_id: result[0]['space_id'], space_name: result[0]['space_name'], city: result[0]['city'], description: result[0]['description'], ppn: result[0]['ppn'], image: result[0]['image'])
+  end
+
   def self.all
     result = DatabaseConnection.query("SELECT * FROM spaces")
     result.map do |space|

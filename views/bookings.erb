@@ -9,6 +9,17 @@
 
 Here are ya fucking bookings
 
+<% @bookings.each do |booking|%>
+  Booking ID: <%= booking.bookings_id %>
+  <br>
+  Date: <%= booking.date %> 
+  
+  <br>
+  <a> <img src = <%=  %> style="width:7em; height:8em;"> </a>
+  <br>
+
+<%end%>
+
 <form action ='/portal'>
   <button class='submit' type='submit'>Portal</button>
 
