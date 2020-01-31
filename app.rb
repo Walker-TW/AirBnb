@@ -6,7 +6,7 @@ require './database_connection_setup'
 class MakersBnB < Sinatra::Base
   enable :sessions
 
-  get '/' do 
+  get '/' do
     erb :index
   end
 
@@ -30,7 +30,6 @@ class MakersBnB < Sinatra::Base
   get '/login/error' do
     erb :'login/error'
   end
-
 
   post '/portal' do
     Space.create(space_name: params[:space_name], city: params[:city], description: params[:description], ppn: params[:ppn])
@@ -74,6 +73,24 @@ class MakersBnB < Sinatra::Base
 
   get '/new' do
     erb :new
+  end
+
+  get '/book' do
+    erb :book
+  end
+
+  post '/book' do
+    session[:date] = params[:date]
+    session[:booking_space] = params[:booking_space]
+    redirect '/booked'
+  end
+
+  get '/booked' do
+    erb :booked
+  end
+
+  get '/bookings' do
+    erb :bookings
   end
 
   post '/logout' do
