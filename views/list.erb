@@ -1,5 +1,6 @@
 I got the list in the erbbbbb
 <br>
+<br>
 
 <% @space.each do |space|%>
   Name: <%= space.space_name%>
@@ -10,6 +11,7 @@ I got the list in the erbbbbb
   <br>
   Price per night: <%= space.ppn%>
   <br>
+  Image: <a > <img src = <%= space.image %> style="width:7em; height:8em;"> </a>
   <br>
 <%end%>
 

@@ -45,6 +45,8 @@ class MakersBnB < Sinatra::Base
 
   get '/list' do
     @space = Space.all
+    p "this is @space"
+    p @space
     erb :list
   end
 
