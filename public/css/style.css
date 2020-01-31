@@ -50,6 +50,8 @@ h1 {
 
 /* --------------------login/new-------------------- */
 
+
+
 /* --------------------book-------------------- */
 
 /* --------------------booked-------------------- */
@@ -72,12 +74,14 @@ h1 {
 /* --------------------new-------------------- */
 
 /* --------------------portal-------------------- */
-
+#greet {
+  color: black;
+}
 #portal {
   background-image: url(https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif);
   background-size: 35%;
   background-repeat: no-repeat;
-  background-position: 50% -90%;
+  background-position: center;
 }
 
 /* --------------------signup-------------------- */
