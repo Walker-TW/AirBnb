@@ -18,9 +18,9 @@ describe Space do
       space2 = Space.create(space_name: "Spacey McSpaceface", city: "Bristol", description:"120 Fake Street BR2 911", ppn:"£130")
       space3 = Space.create(space_name: "SPACE", city: "Edinburgh", description: "125 NotThere Street BR2 9ER", ppn:"£150")
       spaces = Space.all
-      expect(spaces.length).to eq 4 #inc test addition
-      expect(spaces[2].city).to eq "Bristol"
-      expect(spaces[1].space_name).to eq "Spacey MsSpacerson"
+      expect(spaces.length).to eq 3
+      expect(spaces[1].city).to eq "Bristol"
+      expect(spaces[0].space_name).to eq "Spacey MsSpacerson"
     end
   end
 

@@ -11,8 +11,7 @@ Book a space
 <br>
 <form action='/book' method='post'>
   <label for='booking_space'>
-    Name of space
-    <input type='text' name='booking_space'>
+    You are booking <%= @space_name %>
   </label>
   <br>
   <br>
@@ -20,7 +19,7 @@ Book a space
     Date please
     <input type='date' name='date'>
   </label>
-  <input type='submit' value='Book'>
+  <input type='submit' value='Finalise Booking'>
 </form>
 </body>
 </html>
