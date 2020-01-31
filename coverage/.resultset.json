@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/app.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/app.rb": [
         1,
         1,
         1,
@@ -104,12 +104,34 @@
         null,
         1,
         1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         1,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/lib/users.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/lib/users.rb": [
         1,
         1,
         1,
@@ -143,7 +165,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/lib/database_connection.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/lib/database_connection.rb": [
         1,
         null,
         1,
@@ -160,7 +182,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/lib/space.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/lib/space.rb": [
         1,
         null,
         1,
@@ -194,7 +216,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/database_connection_setup.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/database_connection_setup.rb": [
         1,
         null,
         1,
@@ -203,7 +225,7 @@
         0,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/database_connection_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/database_connection_spec.rb": [
         1,
         null,
         1,
@@ -228,10 +250,27 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/feature/app_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/feature/app_spec.rb": [
 
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/feature/listing_multiple_spaces_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/feature/listing_bookings_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/riapatel/makers/week-6/AirBnb/spec/feature/listing_multiple_spaces_spec.rb": [
         1,
         1,
         1,
@@ -263,7 +302,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/feature/listing_space_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/feature/listing_space_spec.rb": [
         1,
         1,
         1,
@@ -284,7 +323,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/feature/login_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/feature/login_spec.rb": [
         1,
         1,
         1,
@@ -334,7 +373,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/feature/sign_up_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/feature/sign_up_spec.rb": [
         1,
         null,
         1,
@@ -345,6 +384,43 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/riapatel/makers/week-6/AirBnb/spec/unit/booking_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/riapatel/makers/week-6/AirBnb/lib/booking.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
         null,
         null
       ],
@@ -422,7 +498,7 @@
         null,
         null
       ],
-      "/Users/bengittins/Projects/Makers/week_6/AirBnb/spec/unit/user_spec.rb": [
+      "/Users/riapatel/makers/week-6/AirBnb/spec/unit/user_spec.rb": [
         1,
         null,
         1,

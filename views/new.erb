@@ -1,29 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <title> New Property</title>
+  <link type='text/css' rel='stylesheet' href='/css/style.css'>
+  <base href='new'>
+</head>
+<body id='new-prop'>
 <h1>Create a properties!!!</h1>
-
 <form action='/portal' method='post'>
   <label for='space_name'>
+  <div id='space_name'>
     Name Your Space:
+    <br>
     <input type='text' name='space_name'>
-  </label>
+  </label> </div>
   <br>
-  <br>
+  <div id='donde'>
   <label for='city'>
     Where Is It?
+    <br>
     <input type='text' name='city'>
   </label>
+  </div>
   <br>
-  <br>
+  <div id='como'>
     <label for='description'>
     Tell Me About The Place...
+    <br>
     <input type='text' name='description'>
   </label>
+  </div>
   <br>
-  <br>
+  <div id='dinero'>
     <label for='ppn'>
     Price Per Night
+    <br>
     <input type='text' name='ppn'>
   </label>
-  <br>
+  </div>
   <br>
   <input type='submit' value='Post'>
 </form>
+</body>
+</html>
