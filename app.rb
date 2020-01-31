@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/users'
 require './lib/space'
+require './lib/booking'
 require './database_connection_setup'
 
 class MakersBnB < Sinatra::Base
@@ -18,6 +19,7 @@ class MakersBnB < Sinatra::Base
     user = User.authenticate(user_name: params[:user_name], password: params[:password])
       if user
         session[:user_id] = user.user_id
+        @user_id = session[:user_id]
         session[:user_name] = params[:user_name]
         session[:password] = params[:password]
         @user_name = session[:user_name]
@@ -76,16 +78,33 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/book' do
+    # p "space name in book:"
+    # p space.space_name
+    session[:space_name] = params[:space_name]
+    @space_name = session[:space_name]
+    # session[:date] = params[:date]
+    # p "date in book"
+    # p session[:date] 
+    # p "params"
+    # p params[:date]
     erb :book
   end
 
   post '/book' do
+    # user find
     session[:date] = params[:date]
+    @date = session[:date]
+    @space_name = session[:space_name]
+    space = Space.find(space_name: @space_name)
+    user = User.find(user_id: session[:user_id])
+    Booking.create(space_id: space.space_id, date: session[:date], user_id: user.user_id)
     session[:booking_space] = params[:booking_space]
     redirect '/booked'
   end
 
   get '/booked' do
+    @date = session[:date]
+    @space_name = session[:space_name]
     erb :booked
   end
 
