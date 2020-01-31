@@ -5,8 +5,14 @@
     <base href="/list">
   </head>
 <body id='list'>
-I got the list in the erbbbbb
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<b><h2>Displaying Toad-ally great properties</h2></b>
+
 <br>
+<img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYuruH0lEPywrKNplQfcPMC_xp-WegbW6Osl-rTHt2klW55ax&s > 
+<br>
+
 
 <% @space.each do |space|%>
   Name: <%= space.space_name%>
@@ -17,23 +23,18 @@ I got the list in the erbbbbb
   <br>
   Price per night: <%= space.ppn%>
   <br>
-  Image: <a> <img src = <%= space.image %> style="width:7em; height:8em;"> </a>
+  Image: <a > <img src = <%= space.image %> style="width:7em; height:8em;"> </a>
   <br>
-  <form action='/book'>
-    
-    <input type='hidden' name='space_name' value='<%=space.space_name%>'>
-
-    <input type='submit' value='Book This Property'>
-  </form>
 
 <%end%>
 
 <form action='/book'>
-  <button class='submit' type='submit'>Book Book Book</button>
+  <input type='submit' value='Book a stay in a toad-ally great property'>
 </form>
 
-<form action='/portal'><br>
-<button class='submit' type='submit'>Take Me Home Country Road</button>
+<form action='/portal'>
+<input type='submit' value='Take me home country road'>
 </form>
+<img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYuruH0lEPywrKNplQfcPMC_xp-WegbW6Osl-rTHt2klW55ax&s > 
 </body>
 </html>
