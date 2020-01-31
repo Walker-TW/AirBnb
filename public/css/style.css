@@ -15,8 +15,11 @@ body {
   font-variant: normal; 
   font-weight: 700; 
   line-height: 26.4px;
-  /* background-image: url(../public/1.gif); */
-  cursor: url(/Users/riapatel/makers/week-6/AirBnb/public/cursor.cur), auto;
+  background-image: url(https://i1.wp.com/gonefroggin.com/wp-content/uploads/2017/06/hypnotoad-animated.gif?resize=474%2C332&ssl=1), url(https://thumbs.gfycat.com/AssuredHeartfeltCopperbutterfly-size_restricted.gif);
+  background-size: 35%, 50%;
+  background-repeat: no-repeat;
+  background-position: -3% -140%, 120% -110%;
+  /* cursor: url(/Users/riapatel/makers/week-6/AirBnb/public/cursor.cur), auto; */
   display: flex;
   flex-direction: column;
 }
@@ -24,10 +27,6 @@ body {
 h1 {
   line-height: 1;
 }
-
-/* .custom {
-  cursor: url(/Users/riapatel/makers/week-6/AirBnb/public/cursor.cur), auto;
-} */
 
 /* --------------------index-------------------- */
 
@@ -74,9 +73,20 @@ h1 {
 
 /* --------------------list-------------------- */
 
+#list {
+  background-image: none;
+}
+
 /* --------------------new-------------------- */
 
 /* --------------------portal-------------------- */
+
+#portal {
+  background-image: url(https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: 50% -90%;
+}
 
 /* --------------------signup-------------------- */
 
