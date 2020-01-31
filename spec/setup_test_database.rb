@@ -5,5 +5,5 @@ def setup_test_database
 
   connection = PG.connect(dbname: 'makersbnb_test')
   connection.exec("TRUNCATE users, spaces, bookings;")
-  connection.exec("INSERT INTO spaces (space_name, city, description, ppn) VALUES('pls work', 'sparta', 'fuck xerxes', '300')")
+  # connection.exec("INSERT INTO spaces (space_name, city, description, ppn) VALUES('pls work', 'sparta', 'fuck xerxes', '300')")
 end

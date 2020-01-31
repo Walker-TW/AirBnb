@@ -13,12 +13,19 @@ I got the list in the erbbbbb
   <br>
   City: <%= space.city%>
   <br>
-  Description: <%= space.description%>
+  Description: <%= space.description %>
   <br>
   Price per night: <%= space.ppn%>
   <br>
   Image: <a> <img src = <%= space.image %> style="width:7em; height:8em;"> </a>
   <br>
+  <form action='/book'>
+    
+    <input type='hidden' name='space_name' value='<%=space.space_name%>'>
+
+    <input type='submit' value='Book This Property'>
+  </form>
+
 <%end%>
 
 <form action='/book'>
